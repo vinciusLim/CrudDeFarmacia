@@ -1,4 +1,4 @@
-package org.example;
+package CRUD.Funcionario;
 
 public class Funcionario {
 }
