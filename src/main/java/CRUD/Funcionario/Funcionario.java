@@ -13,11 +13,27 @@ public class Funcionario {
     proximoId++;
   }
 
+  public static int getProximoId() {
+    return proximoId;
+  }
+
+  public int getIdFuncionario() {
+    return idFuncionario;
+  }
+
+  public String getNomeFuncionario() {
+    return nomeFuncionario;
+  }
+
+  public double getSalarioFuncionario() {
+    return salarioFuncionario;
+  }
+
   @Override
   public String toString() {
     return "Funcionario: " +
-            "ID=" + idFuncionario +
-            ", nome=" + nomeFuncionario + '\'' +
-            ", salario=" + salarioFuncionario;
+            "ID = " + idFuncionario +
+            ", nome = " + nomeFuncionario + '\'' +
+            ", salario = " + salarioFuncionario;
   }
 }
