@@ -1,8 +1,11 @@
 package CRUD.Funcionario;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Gerente extends Funcionario {
-    public Gerente(String nomeFuncionario, double salarioFuncionario) {
-        super(nomeFuncionario, salarioFuncionario);
+    public Gerente(String nomeFuncionario, double salarioFuncionario, String CPF, LocalDate dataAdmissao, String departamento) {
+        super(nomeFuncionario, salarioFuncionario, CPF, dataAdmissao, departamento);
     }
 
     @Override
