@@ -2,7 +2,6 @@ package CRUD;
 
 import CRUD.Funcionario.Departamentos;
 import CRUD.Funcionario.Funcionario;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,10 +41,10 @@ public class Main {
 
                             listaDeFuncionarios.add(new Funcionario(nome, salario, LocalDate.of(ano, mes, dia), Departamentos.valueOf(departamento.toUpperCase())));
 
-                        for (Funcionario f: listaDeFuncionarios) {
-                            System.out.println(listaDeFuncionarios);
-                        }
-                        break;
+                            for (Funcionario f : listaDeFuncionarios) {
+                                System.out.println(listaDeFuncionarios);
+                            }
+                            break;
                     }
             }
         } while (op != 0);
