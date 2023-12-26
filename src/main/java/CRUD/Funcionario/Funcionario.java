@@ -2,6 +2,8 @@ package CRUD.Funcionario;
 
 import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 public class Funcionario {
   private static int proximoId = 1;
@@ -13,8 +15,11 @@ public class Funcionario {
   private Departamentos departamento;
 
   public Funcionario(String nomeFuncionario, double salarioFuncionario, LocalDate dataAdmissao, Departamentos departamento) {
+    this.idFuncionario = proximoId;
+    proximoId++;
     this.nomeFuncionario = nomeFuncionario;
     this.salarioFuncionario = salarioFuncionario;
+    this.dataCadastro = Instant.now();
     this.dataAdmissao = dataAdmissao;
     this.departamento = departamento;
   }
@@ -47,14 +52,26 @@ public class Funcionario {
     return departamento;
   }
 
+  public void setNomeFuncionario(String nomeFuncionario) {
+    this.nomeFuncionario = nomeFuncionario;
+  }
+
+  public void setSalarioFuncionario(double salarioFuncionario) {
+    this.salarioFuncionario = salarioFuncionario;
+  }
+
+  public void setDepartamento(Departamentos departamento) {
+    this.departamento = departamento;
+  }
+
   @Override
   public String toString() {
     return "Funcionario{" +
             "idFuncionario=" + idFuncionario +
             ", nomeFuncionario='" + nomeFuncionario + '\'' +
             ", salarioFuncionario=" + salarioFuncionario +
-            ", dataCadastro=" + dataCadastro +
-            ", dataAdmissao=" + dataAdmissao +
+            ", dataCadastro=" + DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss").withZone(ZoneId.of("-03:00")).format(dataCadastro) +
+            ", dataAdmissao=" + DateTimeFormatter.ofPattern("dd/MM/yyyy").format(dataAdmissao) +
             ", departamento=" + departamento +
             '}';
   }
