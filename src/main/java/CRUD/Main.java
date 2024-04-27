@@ -14,6 +14,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         List<Funcionario> listaDeFuncionarios = new ArrayList<>();
         int op = 0;
+        String name;
         String nome, cpf, departamento;
         double salario;
         int dia, mes, ano, id;
